@@ -1,0 +1,75 @@
+backend:
+  name: test-repo
+  branch: master
+
+media_folder: static/images
+public_folder: /images
+
+display_url: https://gatsby-netlify-cms-example.netlify.com/
+
+# This line should *not* be indented
+publish_mode: editorial_workflow
+
+collections:
+
+  - name: "experience"
+    label: "Experience"
+    folder: "experience"
+    create: true
+    fields:
+        - { name: "title", label: "Company Title", widget: "string" }
+        - { name: "company_role", label: "Position Title", widget: "string" }
+        - { name: "location", label: "Location", widget: "string" }
+        - { name: "work_from", label: "From", widget: "date", format: "MMM YYYY" }
+        - { name: "work_to", label: "To", default: "Present", widget: "date", format: "MMM YYYY" }
+        - { name: "description", label: "Description", widget: "text" }
+        - { name: "tags", label: "Skills Tags", widget: "select", multiple: "true", 
+              options: ["ReactJS", "NodeJS", "HTML", "CSS", "Sass", "PHP", "Typescript", "Joomla", "CMS Made Simple"] }
+
+
+  - name: "blog"
+    label: "Blog"
+    folder: "blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}_{{slug}}"
+    fields:
+      - { name: path, label: Path }
+      - { label: "Image", name: "image", widget: "image" }
+      - { name: title, label: Title }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {label: "Category", name: "category", widget: "string"}
+      - { name: "body", label: "body", widget: markdown }
+      - { name: tags, label: Tags, widget: list }
+
+  
+  - name: "projects"
+    label: "Projects"
+    folder: "projects"
+    create: true
+    fields:
+      - { name: date, label: Date, widget: date }
+      - {label: "Category", name: "category", widget: "string"}
+      - { name: title, label: Title }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { name: body, label: "Details", widget: markdown }
+      - { name: tags, label: Tags, widget: list}
+
+
+  - name: "about"
+    label: "About"
+    folder: "src/pages/about"
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Content Type",
+          name: "contentType",
+          widget: "hidden",
+          default: "about",
+        }
+      - { label: "Path", name: "path", widget: "hidden", default: "/about" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  

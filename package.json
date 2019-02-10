@@ -1,0 +1,40 @@
+{
+  "name": "howard-tibbs-portfolio",
+  "private": true,
+  "description": "This is my portfolio",
+  "version": "1.1.0",
+  "license": "MIT",
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "dependencies": {
+    "gatsby": "^2.0.102",
+    "gatsby-image": "^2.0.29",
+    "gatsby-plugin-manifest": "^2.0.15",
+    "gatsby-plugin-netlify-cms": "^3.0.10",
+    "gatsby-plugin-react-helmet": "^3.0.5",
+    "gatsby-plugin-sharp": "^2.0.18",
+    "gatsby-plugin-typography": "^2.2.5",
+    "gatsby-remark-images": "^3.0.2",
+    "gatsby-source-filesystem": "^2.0.18",
+    "gatsby-transformer-remark": "^2.2.1",
+    "gatsby-transformer-sharp": "^2.1.12",
+    "netlify-cms": "^2.3.3",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-helmet": "^5.2.0",
+    "react-typography": "^0.16.18",
+    "typography": "^0.16.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
